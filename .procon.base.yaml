@@ -674,7 +674,7 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("${normal");
+        case 0: return std::string("${normal}");
         case 1: return std::string("${error_system}");
         case 2: return std::string("${error_startup}");
         case 3: return std::string("${maintenance_error}");
