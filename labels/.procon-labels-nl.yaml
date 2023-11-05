@@ -2,17 +2,17 @@ substitutions:
   procon_version: MelcoBEMS MINI firmware versie
   heat_pump_frequency_master: Warmtepomp frequentie – Master  
   temperature_setpoint_zone_1: Ingestelde temperatuur
-  flow_temperature_setpoint_zone_1: Ingestelde flow temperatuur
-  legionella_temperature_setpoint: Ingestelde Legionella temperatuur
+  flow_temperature_setpoint_zone_1: Ingestelde aanvoer temperatuur
+  legionella_temperature_setpoint: Ingestelde legionella temperatuur
   DHW_temperature_drop: SWW temperatuur hysterese
   room_temperature_zone_1: Kamer temperatuur
   refrigerant_liquid_temperature: Koelmiddelvloeistof temperatuur
   outdoor_ambient_temperature: Buiten temperatuur
-  flow_temperature: Flow temperatuur
+  flow_temperature: Aanvoer temperatuur
   return_temperature: Retour temperatuur
   tank_water_temperature: SWW boiler temperatuur
   return_temperature_setpoint_zone_1: Ingestelde retour temperature
-  boiler_flow_temperature: Boiler flow temperatuur
+  boiler_flow_temperature: Boiler aanvoer temperatuur
   boiler_return_temperature: Boiler retour temperatuur
   heat_pump_run_time: Warmtepomp runtime
   energy_used_heating: Energie gebruikt verwarmen
@@ -29,11 +29,11 @@ substitutions:
   flow_rate: Flow
   consumed_electric_power: Verbruikt elektrisch vermogen
   produced_power: Geproduceerd thermisch vermogen
-  esp_home_version: Esphome Versie
+  esp_home_version: Esphome versie
   fault_code: Fout code
   system_type_detected: Systeem type gedetecteerd
   defrost: Ontdooien
-  residual_heat_removal: Residual heat removal
+  residual_heat_removal: Afvoer van restwarmte
   refrigerant_error_info: Koelmiddel fout info
   seven_segment_display_error_code_digit_1: 7-Segment display fout code digit 1
   seven_segment_display_error_code_digit_2: 7-Segment display fout code digit 2
