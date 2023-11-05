@@ -26,7 +26,7 @@ packages:
 
 # Translations
 Currently supported languages are en, nl.
-In order to change language, edit file `esphome/procon-mitsubishi.yaml`, and change include file (esphome-/.brink-labels-<language>.yaml)
+In order to change language, edit file `esphome/procon.yaml`, and change include file (esphome-/.procon-labels-<language>.yaml)
 
 ## Contact
 Contact me: alphonsuijtdehaag at gmail dot com, if you are interested in a PCB with a ESP32 (mh-et-live or lilygo esp32s3-T7) and XY-017 ttl to rs485 mounted on with 3d printed housing.
