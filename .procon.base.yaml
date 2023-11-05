@@ -596,7 +596,7 @@ text_sensor:
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
         case 8000: return std::string("${no_error}");
-        case 6999: return std::string("${bad_communication_between_a1m_and_unit");
+        case 6999: return std::string("${bad_communication_between_a1m_and_unit}");
         default: return std::to_string(value);
       }
       return x;
