@@ -634,7 +634,7 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("${off}");
+        case 0: return std::string("off");
         case 1: return std::string("${standby}");
         case 2: return std::string("${defrost}");
         case 3: return std::string("${waiting_restart}");
