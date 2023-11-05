@@ -57,3 +57,43 @@ substitutions:
   unknown: Unknown
   hours: hours
   days: days
+
+  no_error: No Error
+  bad_communication_between_a1m_and_unit: Bad Communication Between A1M And Unit
+  
+  ata_unit_connected: ATA unit connected
+  atw_system_connected: ATW system connected
+  lossnay_system_connected: Lossnay system connected
+  off: "Off"
+  standby: Standby
+  defrost: Defrost
+  waiting_restart: Waiting restart
+
+  normal: Normal
+  prepared: Prepared
+  residual_heat_removal: Residual heat removal
+
+  normal: Normal
+  error_system: Error (System)
+  error_startup: Error (Startup)
+  maintenance_error: Maintenance Error
+
+  heatpump: Heatpump
+  screw_in_heater: Screw-in heater
+  electric_heater: Electric heater
+  screw_in_heater_and_electric_heater: Screw-in heater and electric heater
+  dhw_boiler: DHW boiler
+
+  stop: Stop
+  hot_water: Hot Water
+  heating: Heating
+  cooling: Cooling
+  freeze_stat: Freeze Stat
+  legionella: Legionella
+
+  heating_room: Heating room
+  heating_flow: Heating flow
+  heating_curve: Heating curve
+  cooling_room: Cooling room
+  cooling_flow: Cooling flow
+  floor_dryup: Floor Dryup

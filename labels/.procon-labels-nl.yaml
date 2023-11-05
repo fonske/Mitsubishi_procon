@@ -57,3 +57,44 @@ substitutions:
   unknown: Onbekend
   hours: uur
   days: dagen
+
+  no_error: Geen fout
+  bad_communication_between_a1m_and_unit: Slechte communicatie tussen A1M en Unit
+
+  ata_unit_connected: ATA unit verbonden
+  atw_system_connected: ATW systeem verbonden
+  lossnay_system_connected: Lossnay systeem verbonden
+  off: Uit
+  standby: Standby
+  defrost: Ontdooien
+  waiting_restart: Wachten herstart
+
+  normal: Normaal
+  prepared: Voorbereid
+  residual_heat_removal: Afvoer van restwarmte
+
+  normal: Normaal
+  error_system: Fout (Systeem)
+  error_startup: Fout (Opstart)
+  maintenance_error: Onderhouds fout
+
+  heatpump: Warmtepomp
+  screw_in_heater: Externe heater
+  electric_heater: Interne heater
+  screw_in_heater_and_electric_heater: Externe heater and interne heater
+  dhw_boiler: SWW boiler
+
+  stop: Stop
+  hot_water: Warm water
+  heating: Verwarmen
+  cooling: Koelen
+  freeze_stat: Ontdooien
+  legionella: Legionella
+
+  heating_room: Verwarmen ruimte
+  heating_flow: Verwarmen flow
+  heating_curve: Verwarmen curve
+  cooling_room: Koelen ruimte
+  cooling_flow: Koelen flow
+  floor_dryup: Vloer drogen
+
