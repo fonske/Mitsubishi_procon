@@ -947,12 +947,12 @@ select:
     name: ${ac_mode_zone_1}
     address: 28
     optionsmap:
-      heating_room: 0
-      heating_flow: 1
-      heating_curve: 2
-      cooling_room: 3
-      cooling_flow: 4
-      floor_dryup: 5
+      "heating_room": 0
+      "heating_flow": 1
+      "heating_curve": 2
+      "cooling_room": 3
+      "cooling_flow": 4
+      "floor_dryup": 5
     entity_category: config
 
 
@@ -963,6 +963,6 @@ select:
     name: ${hc_control_type}
     address: 58
     optionsmap:
-      heating: 0
-      cooling: 1
+      "heating": 0
+      "cooling": 1
     entity_category: config
