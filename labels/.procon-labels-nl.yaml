@@ -64,7 +64,7 @@ substitutions:
   ata_unit_connected: ATA unit verbonden
   atw_system_connected: ATW systeem verbonden
   lossnay_system_connected: Lossnay systeem verbonden
-  off: Uit
+
   standby: Standby
   defrost: Ontdooien
   waiting_restart: Wachten herstart
