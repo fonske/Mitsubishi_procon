@@ -674,10 +674,10 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("${normal}");
-        case 1: return std::string("${error_system}");
-        case 2: return std::string("${error_startup}");
-        case 3: return std::string("${maintenance_error}");
+        case 0: return std::string("normal");
+        case 1: return std::string("error_system");
+        case 2: return std::string("error_startup");
+        case 3: return std::string("maintenance_error");
         default: return std::to_string(value);
       }
       return x;
@@ -757,11 +757,11 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("${heatpump}");
-        case 1: return std::string("${screw_in_heater}");
-        case 2: return std::string("${electric_heater}");
-        case 3: return std::string("${screw_in_heater_and_electric_heater}");
-        case 4: return std::string("${dhw_boiler}");
+        case 0: return std::string("heatpump");
+        case 1: return std::string("screw_in_heater");
+        case 2: return std::string("electric_heater");
+        case 3: return std::string("screw_in_heater_and_electric_heater");
+        case 4: return std::string("dhw_boiler");
         default: return std::to_string(value);
       }
       return x;
