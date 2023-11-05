@@ -1,0 +1,35 @@
+substitutions:
+  name: mitsubishi
+  device_description: "Esphome modbus component for Mitsubishi Procon A1M mini"
+  friendly_name: Mitsubishi
+  timezone: "Europe/Amsterdam"
+
+# In order to use other language or a different ESP chip, fix include file name below:
+# Currently supported languages are en, nl. 
+# ESP32 is a mh-et-live and esp32s3 is a lilygo ESP32S3-T7
+# Be carefull not to upload the wrong code to the wrong chip. This could brick your ESP chip.
+packages:
+  remote_package:
+    url: https://github.com/fonske/Mitsubishi_procon
+    ref: main
+    files: 
+      - esphome/.procon.base.yaml
+      - esphome/labels/.procon-labels-en.yaml
+      # - esphome/labels/.procon-labels-nl.yaml
+      # - esphome/boards/board-esp32.yaml
+      - esphome/boards/board-esp32S3.yaml
+
+# for developing/testing, uncomment local includes and comment out remote_package part.
+# packages:
+#   substitutions: !include labels/.procon-labels-en.yaml
+#   device_base1: !include .procon.base.yaml
+#   device_base2: !include boards/board-esp32.yaml
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+# Put your API key here if you have one
+# api:
+#   encryption:
+#     key: !secret brink_api_key
