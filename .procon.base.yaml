@@ -635,9 +635,9 @@ text_sensor:
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
         case 0: return std::string("off");
-        case 1: return std::string("${standby}");
-        case 2: return std::string("${defrost}");
-        case 3: return std::string("${waiting_restart}");
+        case 1: return std::string("standby");
+        case 2: return std::string("defrost");
+        case 3: return std::string("waiting_restart");
         default: return std::to_string(value);
       }
       return x;
@@ -654,9 +654,9 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("${normal}");
-        case 1: return std::string("${prepared}");
-        case 2: return std::string("${residual_heat_removal}");
+        case 0: return std::string("normal");
+        case 1: return std::string("prepared");
+        case 2: return std::string("residual_heat_removal");
         default: return std::to_string(value);
       }
       return x;
@@ -674,9 +674,9 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("${normal}");
-        case 1: return std::string("${error_system})");
-        case 2: return std::string("${error_startup})");
+        case 0: return std::string("${normal");
+        case 1: return std::string("${error_system}");
+        case 2: return std::string("${error_startup}");
         case 3: return std::string("${maintenance_error}");
         default: return std::to_string(value);
       }
