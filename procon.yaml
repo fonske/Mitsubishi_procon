@@ -19,8 +19,8 @@ packages:
       # - esphome/boards/board-esp32.yaml
       - esphome/boards/board-esp32S3.yaml
 
-# for developing/testing, uncomment local includes and comment out remote_package part.
-# packages:
+## for developing/testing, uncomment local includes and comment out remote_package part.
+## packages:
 #   substitutions: !include labels/.procon-labels-en.yaml
 #   device_base1: !include .procon.base.yaml
 #   device_base2: !include boards/board-esp32.yaml
