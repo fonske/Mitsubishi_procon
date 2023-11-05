@@ -67,17 +67,6 @@ sensor:
 ## Option for Relay  ***experimental***
 ## Comment with # if not used.
 
-switch:
-  ## Relay
-  - platform: gpio
-    pin:
-      number: 5
-      inverted: false
-    name: "Relay"
-    id: brink_relay
-#    internal: true
-    icon: mdi:alarm-bell
-
 # Enable/Disable logging
 logger:
   logs:
