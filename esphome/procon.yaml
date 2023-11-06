@@ -1,6 +1,6 @@
 substitutions:
   name: mitsubishi
-  device_description: "Esphome modbus component for Mitsubishi Procon A1M mini"
+  device_description: "Esphome component for Mitsubishi Procon A1M mini with modbus"
   friendly_name: Mitsubishi
   timezone: "Europe/Amsterdam"
 
