@@ -65,8 +65,6 @@ substitutions:
   waiting_restart: Wachten herstart
   normal: Normaal
   prepared: Voorbereid
-  residual_heat_removal: Afvoer van restwarmte
-  normal: Normaal
   error_system: Fout (Systeem)
   error_startup: Fout (Opstart)
   maintenance_error: Onderhouds fout
@@ -76,6 +74,7 @@ substitutions:
   screw_in_heater_and_electric_heater: Externe heater and interne heater
   dhw_boiler: SWW boiler
   stop: Stop
+  none: Uit
   hot_water: Warm water
   heating: Verwarmen
   cooling: Koelen

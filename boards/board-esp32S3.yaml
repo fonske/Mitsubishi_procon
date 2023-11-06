@@ -1,6 +1,5 @@
 ### ESP32S3 used is a LILYGO ESP32S3-T7  (tindie.com)
 ### The modbus TTL to RS485 interface used is a XY-017  (RS3485). No flow control needed and 3.3V powersupply
-
 esp32:
   board: adafruit_feather_esp32s3_nopsram
   framework:
@@ -34,7 +33,7 @@ i2c:
 
 ## Option for DHT11 or DHT22 on last 3 terminals -/Signal/+ ***experimental***
 ## Comment with # if not used.
-sensor:
+#sensor:
 ## Option for multiple DS18b20 on last 3 terminals -/Signal/+ 
 ## Comment with # if not used.
 ## 2x ds18b20: 

@@ -65,8 +65,6 @@ substitutions:
   waiting_restart: Waiting restart
   normal: Normal
   prepared: Prepared
-  residual_heat_removal: Residual heat removal
-  normal: Normal
   error_system: Error (System)
   error_startup: Error (Startup)
   maintenance_error: Maintenance Error
@@ -76,6 +74,7 @@ substitutions:
   screw_in_heater_and_electric_heater: Screw-in heater and electric heater
   dhw_boiler: DHW boiler
   stop: Stop
+  none: "Off"
   hot_water: Hot Water
   heating: Heating
   cooling: Cooling
