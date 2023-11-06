@@ -18,6 +18,7 @@ modbus:
 
 modbus_controller:
   - id: ${name}
+    ## Procon Modbus slaveaddress 1
     address: 1
     modbus_id: modbus1
     setup_priority: -10
