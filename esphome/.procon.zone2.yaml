@@ -48,20 +48,20 @@ sensor:
       - multiply: 0.01
 
     ## Flow Temperature – Zone 2 (signed) (FC4: 70, MA: 30071)
-  - platform: modbus_controller
-    modbus_controller_id: ${name}
-    id: flow_temperature_zone_2
-    name: ${flow_temperature_zone_2}
-    icon: mdi:thermometer-auto
-    address: 70
-    device_class: temperature
-    unit_of_measurement: "°C"
-    register_type: read
-    value_type: S_WORD
-    accuracy_decimals: 1
-    state_class: "measurement"  
-    filters:
-      - multiply: 0.01
+#  - platform: modbus_controller
+#    modbus_controller_id: ${name}
+#    id: flow_temperature_zone_2
+#    name: ${flow_temperature_zone_2}
+#    icon: mdi:thermometer-auto
+#    address: 70
+#    device_class: temperature
+#    unit_of_measurement: "°C"
+#    register_type: read
+#    value_type: S_WORD
+#    accuracy_decimals: 1
+#    state_class: "measurement"  
+#    filters:
+#      - multiply: 0.01
 
     ## Return Temperature – Zone 2 (signed) (FC4: 72, MA 30073)
   - platform: modbus_controller
@@ -95,7 +95,7 @@ number:
     min_value: 10
     max_value: 36
     multiply: 100
-    
+
     ## Thermostat Target Temperature – Zone 2 (signed) (FC6: 56, MA: 40057)
   - platform: modbus_controller
     modbus_controller_id: ${name}
