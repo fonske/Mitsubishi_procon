@@ -62,7 +62,6 @@ substitutions:
   atw_system_connected: ATW system connected
   lossnay_system_connected: Lossnay system connected
   standby: Standby
-  defrost: Defrost
   waiting_restart: Waiting restart
   normal: Normal
   prepared: Prepared
