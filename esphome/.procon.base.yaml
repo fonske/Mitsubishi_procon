@@ -49,6 +49,7 @@ sensor:
     register_type: read
     value_type: U_WORD
     accuracy_decimals: 0
+    state_class: "measurement"
 
     ## Temperature Setpoint – Zone 1 (signed) (FC4: 40, MA: 30041)
   - platform: modbus_controller
@@ -62,6 +63,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -77,6 +79,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -92,6 +95,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -107,6 +111,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.1
 
@@ -122,6 +127,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -137,6 +143,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
     
@@ -152,6 +159,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.1
 
@@ -167,6 +175,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -182,6 +191,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -197,6 +207,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -212,6 +223,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -227,6 +239,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -242,6 +255,7 @@ sensor:
     register_type: read
     value_type: S_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
     filters:
       - multiply: 0.01
 
@@ -528,6 +542,7 @@ sensor:
     register_type: read
     value_type: U_WORD
     accuracy_decimals: 1
+    state_class: "measurement"
 
     ## Version of main software (FC4: 199, MA: 30200)
 #  - platform: modbus_controller
