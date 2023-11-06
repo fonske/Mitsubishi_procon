@@ -2,16 +2,20 @@ substitutions:
   procon_version: MelcoBEMS MINI firmware versie
   heat_pump_frequency_master: Warmtepomp frequentie – Master  
   temperature_setpoint_zone_1: Ingestelde temperatuur
+  temperature_setpoint_zone_2: Ingestelde temperatuur Z2
   flow_temperature_setpoint_zone_1: Ingestelde aanvoer temperatuur
+  flow_temperature_setpoint_zone_2: Ingestelde aanvoer temperatuur Z2
   legionella_temperature_setpoint: Ingestelde legionella temperatuur
   DHW_temperature_drop: SWW temperatuur hysterese
   room_temperature_zone_1: Kamer temperatuur
+  room_temperature_zone_2: Kamer temperatuur Z2
   refrigerant_liquid_temperature: Koelmiddelvloeistof temperatuur
   outdoor_ambient_temperature: Buiten temperatuur
   flow_temperature: Aanvoer temperatuur
   return_temperature: Retour temperatuur
   tank_water_temperature: SWW boiler temperatuur
   return_temperature_setpoint_zone_1: Ingestelde retour temperature
+  return_temperature_setpoint_zone_2: Ingestelde retour temperature Z2
   boiler_flow_temperature: Boiler aanvoer temperatuur
   boiler_return_temperature: Boiler retour temperatuur
   heat_pump_run_time: Warmtepomp runtime
@@ -42,14 +46,18 @@ substitutions:
   operating_mode: Werkings mode
   set_tank_water_temperature: Ingestelde boiler doel temperatuur
   hc_thermostat_target_temperature_zone_1: Verw/Koelen doel temperatuur
+  hc_thermostat_target_temperature_zone_2: Verw/Koelen doel temperatuur Z2
   thermostat_target_temperature_zone_1: Thermostaat doel temperatuur
+  thermostat_target_temperature_zone_2: Thermostaat doel temperatuur Z2
   relay: Relais
   operating_mode_dhw: DHW eco modus
   force_dhw: Forceer SWW
   set_holiday: Vakantie modus
   cooling_on_prohibit_zone_1: Koelen verboden
+  cooling_on_prohibit_zone_2: Koelen verboden Z2
   system_on_off: Systeem aan/uit
   ac_mode_zone_1: A/C mode
+  ac_mode_zone_2: A/C mode Z2
   hc_control_type: HC controle type
   auto: Auto
   initialize: Initialiseren

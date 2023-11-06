@@ -2,16 +2,20 @@ substitutions:
   procon_version: MelcoBEMS MINI firmware version
   heat_pump_frequency_master: Heat pump frequency – Master  
   temperature_setpoint_zone_1: Temperature setpoint
+  temperature_setpoint_zone_2: Temperature setpoint Z2
   flow_temperature_setpoint_zone_1: Flow temperature setpoint
+  flow_temperature_setpoint_zone_2: Flow temperature setpoint Z2
   legionella_temperature_setpoint: Legionella temperature setpoint
   DHW_temperature_drop: DHW temperature drop
   room_temperature_zone_1: Room temperature
+  room_temperature_zone_2: Room temperature Z2
   refrigerant_liquid_temperature: Refrigerant liquid temperature
   outdoor_ambient_temperature: Outdoor ambient temperature
   flow_temperature: Flow temperature
   return_temperature: Return temperature
   tank_water_temperature: Tank water temperature
   return_temperature_setpoint_zone_1: Return temperature setpoint
+  return_temperature_setpoint_zone_2: Return temperature setpoint Z2
   boiler_flow_temperature: Boiler flow temperature
   boiler_return_temperature: Boiler return temperature
   heat_pump_run_time: Heat pump run time
@@ -42,14 +46,18 @@ substitutions:
   operating_mode: Operating mode
   set_tank_water_temperature: Set tank water temperature
   hc_thermostat_target_temperature_zone_1: H/C thermostat target temperature
+  hc_thermostat_target_temperature_zone_2: H/C thermostat target temperature Z2
   thermostat_target_temperature_zone_1: Thermostat target temperature
+  thermostat_target_temperature_zone_2: Thermostat target temperature Z2
   relay: Relay
   operating_mode_dhw: DHW eco mode
   force_dhw: Set force DHW
   set_holiday: Set holiday mode
   cooling_on_prohibit_zone_1: Cooling on prohibit
+  cooling_on_prohibit_zone_2: Cooling on prohibit Z2
   system_on_off: System on/off
   ac_mode_zone_1: A/C mode
+  ac_mode_zone_2: A/C mode Z2
   hc_control_type: HC control type
   auto: Auto
   initialize: Initialize

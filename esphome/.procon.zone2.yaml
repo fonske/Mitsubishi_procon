@@ -3,9 +3,9 @@ sensor:
   - platform: modbus_controller
     modbus_controller_id: ${name}
     id: temperature_setpoint_zone_2
-    name: ${device} Temperature Setpoint – Zone 2
+    name: ${temperature_setpoint_zone_2}
     icon: mdi:home-thermometer
-    address: 0x2A
+    address: 42
     device_class: temperature
     unit_of_measurement: "°C"
     register_type: read
@@ -18,9 +18,9 @@ sensor:
   - platform: modbus_controller
     modbus_controller_id: ${name}
     id: flow_temperature_setpoint_zone_2
-    name: ${device} Flow Temperature Setpoint – Zone 2
+    name: ${flow_temperature_setpoint_zone_2}
     icon: mdi:thermometer-auto
-    address: 0x2E
+    address: 46
     device_class: temperature
     unit_of_measurement: "°C"
     register_type: read
@@ -33,9 +33,9 @@ sensor:
   - platform: modbus_controller
     modbus_controller_id: ${name}
     id: room_temperature_zone_2
-    name: ${device} Room temperature - Zone 2
+    name: ${room_temperature_zone_2}
     icon: mdi:home-thermometer
-    address: 0x36
+    address: 54
     device_class: temperature
     unit_of_measurement: "°C"
     register_type: read
@@ -48,9 +48,9 @@ sensor:
   - platform: modbus_controller
     modbus_controller_id: ${name}
     id: flow_temperature_zone_2
-    name: ${device} Flow temperature - Zone 2
+    name: ${flow_temperature_zone_2}
     icon: mdi:thermometer-auto
-    address: 0x46
+    address: 70
     device_class: temperature
     unit_of_measurement: "°C"
     register_type: read
@@ -62,10 +62,10 @@ sensor:
     ## Return Temperature – Zone 2 (signed) (FC4: 72, MA 30073)
   - platform: modbus_controller
     modbus_controller_id: ${name}
-    id: return_temperature_zone_2
-    name: ${device} Return temperature - Zone 2
+    id: return_temperature_setpoint_zone_2
+    name: ${return_temperature_setpoint_zone_2}
     icon: mdi:thermometer
-    address: 0x48
+    address: 72
     device_class: temperature
     unit_of_measurement: "°C"
     register_type: read
@@ -80,10 +80,10 @@ number:
   - platform: modbus_controller
     modbus_controller_id: ${name}
     id: hc_thermostat_target_temperature_zone_2
-    name: ${device} H/C Thermostat Target Temperature – Zone 2
+    name: ${hc_thermostat_target_temperature_zone_2}
     device_class: temperature
     icon: mdi:home-thermometer
-    address: 0x22
+    address: 34
     unit_of_measurement: "°C"
     step: 0.5
     register_type: holding
@@ -95,10 +95,10 @@ number:
   - platform: modbus_controller
     modbus_controller_id: ${name}
     id: thermostat_target_temperature_zone_2
-    name: ${device} Thermostat Target Temperature – Zone 2
+    name: ${thermostat_target_temperature_zone_2}
     device_class: temperature
     icon: mdi:home-thermometer
-    address: 0x38
+    address: 56
     unit_of_measurement: "°C"
     step: 0.5
     register_type: holding
@@ -112,10 +112,10 @@ switch:
   - platform: modbus_controller
     modbus_controller_id: ${name}
     id: cooling_on_prohibit_zone_2
-    name: ${device} Cooling On Prohibit – Zone 2
+    name: ${cooling_on_prohibit_zone_2}
     register_type: holding
     icon: mdi:block-helper
-    address: 0x2B
+    address: 43
     bitmask: 1
     entity_category: config
 
@@ -124,13 +124,13 @@ select:
   - platform: modbus_controller
     modbus_controller_id: ${name}
     id: ac_mode_zone_2
-    name: ${device} A/C mode - Zone 2
-    address: 0x1D
+    name: ${ac_mode_zone_2}
+    address: 29
     optionsmap:
-      "Heating room": 0
-      "Heating flow": 1
-      "Heating curve": 2
-      "Cooling room": 3
-      "Cooling flow": 4
-      "Floor Dryup": 5
+      ${heating_room}: 0
+      ${heating_flow}: 1
+      ${heating_curve}: 2
+      ${cooling_room}: 3
+      ${cooling_flow}: 4
+      ${floor_dryup}: 5
     entity_category: config
