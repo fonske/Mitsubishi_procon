@@ -1,0 +1,136 @@
+sensor:
+    ## Temperature Setpoint – Zone 2 (signed) (FC4: 42, MA: 30043)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: temperature_setpoint_zone_2
+    name: ${device} Temperature Setpoint – Zone 2
+    icon: mdi:home-thermometer
+    address: 0x2A
+    device_class: temperature
+    unit_of_measurement: "°C"
+    register_type: read
+    value_type: S_WORD
+    accuracy_decimals: 1
+    state_class: "measurement"
+    filters:
+      - multiply: 0.01
+    ## Flow Temperature Setpoint – Zone 2 (signed) (FC4: 46, MA: 30047)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: flow_temperature_setpoint_zone_2
+    name: ${device} Flow Temperature Setpoint – Zone 2
+    icon: mdi:thermometer-auto
+    address: 0x2E
+    device_class: temperature
+    unit_of_measurement: "°C"
+    register_type: read
+    value_type: S_WORD
+    accuracy_decimals: 1
+    state_class: "measurement"
+    filters:
+      - multiply: 0.01
+    ## Room Temperature – Zone 2 (signed) (FC4: 54, MA: 30054)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: room_temperature_zone_2
+    name: ${device} Room temperature - Zone 2
+    icon: mdi:home-thermometer
+    address: 0x36
+    device_class: temperature
+    unit_of_measurement: "°C"
+    register_type: read
+    value_type: S_WORD
+    accuracy_decimals: 1
+    state_class: "measurement"
+    filters:
+      - multiply: 0.01
+    ## Flow Temperature – Zone 2 (signed) (FC4: 70, MA: 30071)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: flow_temperature_zone_2
+    name: ${device} Flow temperature - Zone 2
+    icon: mdi:thermometer-auto
+    address: 0x46
+    device_class: temperature
+    unit_of_measurement: "°C"
+    register_type: read
+    value_type: S_WORD
+    accuracy_decimals: 1
+    state_class: "measurement"  
+    filters:
+      - multiply: 0.01
+    ## Return Temperature – Zone 2 (signed) (FC4: 72, MA 30073)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: return_temperature_zone_2
+    name: ${device} Return temperature - Zone 2
+    icon: mdi:thermometer
+    address: 0x48
+    device_class: temperature
+    unit_of_measurement: "°C"
+    register_type: read
+    value_type: S_WORD
+    accuracy_decimals: 1
+    state_class: "measurement"  
+    filters:
+      - multiply: 0.01
+
+number:
+    ## H/C Thermostat Target Temperature – Zone 2 (signed) (FC6: 34, MA: 40035)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: hc_thermostat_target_temperature_zone_2
+    name: ${device} H/C Thermostat Target Temperature – Zone 2
+    device_class: temperature
+    icon: mdi:home-thermometer
+    address: 0x22
+    unit_of_measurement: "°C"
+    step: 0.5
+    register_type: holding
+    value_type: S_WORD
+    min_value: 10
+    max_value: 36
+    multiply: 100
+    ## Thermostat Target Temperature – Zone 2 (signed) (FC6: 56, MA: 40057)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: thermostat_target_temperature_zone_2
+    name: ${device} Thermostat Target Temperature – Zone 2
+    device_class: temperature
+    icon: mdi:home-thermometer
+    address: 0x38
+    unit_of_measurement: "°C"
+    step: 0.5
+    register_type: holding
+    value_type: S_WORD
+    min_value: 10
+    max_value: 36
+    multiply: 100
+
+switch:
+    ## Cooling On Prohibit – Zone 2 (FC6: 43, MA: 40044)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: cooling_on_prohibit_zone_2
+    name: ${device} Cooling On Prohibit – Zone 2
+    register_type: holding
+    icon: mdi:block-helper
+    address: 0x2B
+    bitmask: 1
+    entity_category: config
+
+select:
+    ## A/C mode – Zone 2 (FC6: 29, 40030)
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: ac_mode_zone_2
+    name: ${device} A/C mode - Zone 2
+    address: 0x1D
+    optionsmap:
+      "Heating room": 0
+      "Heating flow": 1
+      "Heating curve": 2
+      "Cooling room": 3
+      "Cooling flow": 4
+      "Floor Dryup": 5
+    entity_category: config
