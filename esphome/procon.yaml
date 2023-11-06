@@ -1,6 +1,6 @@
 substitutions:
   name: mitsubishi
-  device_description: "Esphome modbus component for Mitsubishi Procon A1M mini"
+  device_description: "Esphome component for Mitsubishi Procon A1M mini with modbus"
   friendly_name: Mitsubishi
   timezone: "Europe/Amsterdam"
 
@@ -13,9 +13,9 @@ packages:
     url: https://github.com/fonske/Mitsubishi_procon
     ref: main
     files: 
-      - esphome/.procon.base.yaml
       - esphome/labels/.procon-labels-en.yaml
       # - esphome/labels/.procon-labels-nl.yaml
+      - esphome/.procon.base.yaml
       - esphome/boards/board-esp32.yaml
       #- esphome/boards/board-esp32S3.yaml
 
