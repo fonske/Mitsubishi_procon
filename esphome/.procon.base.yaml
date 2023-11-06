@@ -15,6 +15,7 @@ ota:
 ### modbus ###
 modbus:
   id: modbus1
+  send_wait_time: 200ms
 
 modbus_controller:
   - id: ${name}
