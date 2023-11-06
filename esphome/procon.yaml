@@ -14,7 +14,7 @@ packages:
     ref: main
     files: 
       - esphome/labels/.procon-labels-en.yaml
-      # - esphome/labels/.procon-labels-nl.yaml
+      #- esphome/labels/.procon-labels-nl.yaml
       - esphome/.procon.base.yaml
       - esphome/boards/board-esp32.yaml
       #- esphome/boards/board-esp32S3.yaml
