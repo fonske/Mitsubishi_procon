@@ -13,7 +13,7 @@ packages:
     files: 
       - esphome/.procon.base.yaml
       - esphome/labels/.procon-labels-en.yaml
-      # - esphome/labels/.procon-labels-nl.yaml
+      #- esphome/labels/.procon-labels-nl.yaml
       - esphome/boards/board-esp32.yaml
       #- esphome/boards/board-esp32S3.yaml
 
