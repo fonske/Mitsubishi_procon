@@ -1,5 +1,5 @@
 substitutions:
-  procon_version: MelcoBEMS MINI firmware versie
+  procon_version: MelcoBEMS MINI fW versie
   heat_pump_frequency_master: Warmtepomp frequentie – Master  
   temperature_setpoint_zone_1: Ingestelde temperatuur
   temperature_setpoint_zone_2: Ingestelde temperatuur Z2
@@ -14,8 +14,8 @@ substitutions:
   flow_temperature: Aanvoer temperatuur
   return_temperature: Retour temperatuur
   tank_water_temperature: SWW boiler temperatuur
-  return_temperature_setpoint_zone_1: Ingestelde retour temperature
-  return_temperature_setpoint_zone_2: Ingestelde retour temperature Z2
+  return_temperature_setpoint_zone_1: Ingestelde retour temperatuur
+  return_temperature_setpoint_zone_2: Ingestelde retour temperatuur Z2
   boiler_flow_temperature: Boiler aanvoer temperatuur
   boiler_return_temperature: Boiler retour temperatuur
   heat_pump_run_time: Warmtepomp runtime
@@ -50,7 +50,7 @@ substitutions:
   thermostat_target_temperature_zone_1: Thermostaat doel temperatuur
   thermostat_target_temperature_zone_2: Thermostaat doel temperatuur Z2
   relay: Relais
-  operating_mode_dhw: DHW eco modus
+  operating_mode_dhw: SWW eco modus
   force_dhw: Forceer SWW
   set_holiday: Vakantie modus
   cooling_on_prohibit_zone_1: Koelen verboden
