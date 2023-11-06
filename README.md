@@ -3,7 +3,7 @@ Modbus RTU communication with ESP32/ESP32S3 and ttl to rs485 module, to use in h
 
 # Platforms
 Currently supported ESP32 platforms.
-By default Lilygo T7-S3 ESP32S3 is used. If you want to use ESP32 (MH-ET-LIVE), edit file `esphome/procon.yaml`, comment out board-esp32s3 include and uncomment board-esp32 include file.
+By default ESP32 (MH-ET-LIVE) is used. If you want to use Lilygo T7-S3 ESP32S3, edit file esphome/procon.yaml`, uncomment board-esp32 include and comment out board-esp32S3 include file.
 
 ```
 packages:
