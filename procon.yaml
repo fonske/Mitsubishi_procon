@@ -16,18 +16,21 @@ packages:
       - esphome/.procon.base.yaml
       - esphome/labels/.procon-labels-en.yaml
       # - esphome/labels/.procon-labels-nl.yaml
-      # - esphome/boards/board-esp32.yaml
-      - esphome/boards/board-esp32S3.yaml
+      - esphome/boards/board-esp32.yaml
+      #- esphome/boards/board-esp32S3.yaml
 
 ## for developing/testing, uncomment local includes and comment out remote_package part.
-## packages:
-#   substitutions: !include labels/.procon-labels-en.yaml
-#   device_base1: !include .procon.base.yaml
-#   device_base2: !include boards/board-esp32.yaml
+#packages:
+#  substitutions: !include labels/.procon-labels-nl.yaml
+#  device_base1: !include .procon.base.yaml
+#  device_base2: !include boards/board-esp32.yaml
+#  device_base2: !include boards/board-esp32S3.yaml
 
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
+  # uncomment when it needs to run on a .local domain
+  #  domain: .local
 
 # Put your API key here if you have one
 # api:

@@ -558,6 +558,7 @@ sensor:
     id: consumed_electric_power
     name: ${consumed_electric_power}
     address: 227
+    unit_of_measurement: "kWh"
     icon: mdi:lightning-bolt
     device_class: energy
     state_class: total_increasing
@@ -570,6 +571,7 @@ sensor:
     id: produced_power
     name: ${produced_power}
     address: 228
+    unit_of_measurement: "kWh"
     icon: mdi:lightning-bolt
     device_class: energy
     state_class: total_increasing
@@ -595,8 +597,8 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 8000: return std::string("no_error");
-        case 6999: return std::string("bad_communication_between_a1m_and_unit");
+        case 8000: return std::string("${no_error}");
+        case 6999: return std::string("${bad_communication_between_a1m_and_unit}");
         default: return std::to_string(value);
       }
       return x;
@@ -614,9 +616,9 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("ata_unit_connected");
-        case 1: return std::string("atw_system_connected");
-        case 2: return std::string("lossnay_system_connected");
+        case 0: return std::string("${ata_unit_connected}");
+        case 1: return std::string("${atw_system_connected}");
+        case 2: return std::string("${lossnay_system_connected}");
         default: return std::to_string(value);
       }
       return x;
@@ -634,10 +636,10 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("off");
-        case 1: return std::string("standby");
-        case 2: return std::string("defrost");
-        case 3: return std::string("waiting_restart");
+        case 0: return std::string("${none}");
+        case 1: return std::string("${standby}");
+        case 2: return std::string("${defrost}");
+        case 3: return std::string("${waiting_restart}");
         default: return std::to_string(value);
       }
       return x;
@@ -654,9 +656,9 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("normal");
-        case 1: return std::string("prepared");
-        case 2: return std::string("residual_heat_removal");
+        case 0: return std::string("${normal}");
+        case 1: return std::string("${prepared}");
+        case 2: return std::string("${residual_heat_removal}");
         default: return std::to_string(value);
       }
       return x;
@@ -674,10 +676,10 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("normal");
-        case 1: return std::string("error_system");
-        case 2: return std::string("error_startup");
-        case 3: return std::string("maintenance_error");
+        case 0: return std::string("${normal}");
+        case 1: return std::string("${error_system}");
+        case 2: return std::string("${error_startup}");
+        case 3: return std::string("${maintenance_error}");
         default: return std::to_string(value);
       }
       return x;
@@ -757,11 +759,11 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("heatpump");
-        case 1: return std::string("screw_in_heater");
-        case 2: return std::string("electric_heater");
-        case 3: return std::string("screw_in_heater_and_electric_heater");
-        case 4: return std::string("dhw_boiler");
+        case 0: return std::string("${heatpump}");
+        case 1: return std::string("${screw_in_heater}");
+        case 2: return std::string("${electric_heater}");
+        case 3: return std::string("${screw_in_heater_and_electric_heater}");
+        case 4: return std::string("${dhw_boiler}");
         default: return std::to_string(value);
       }
       return x;
@@ -811,12 +813,12 @@ text_sensor:
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
-        case 0: return std::string("stop");
-        case 1: return std::string("hot_water");
-        case 2: return std::string("heating");
-        case 3: return std::string("cooling");
-        case 5: return std::string("freeze_stat");
-        case 6: return std::string("legionella");
+        case 0: return std::string("${stop}");
+        case 1: return std::string("${hot_water}");
+        case 2: return std::string("${heating}");
+        case 3: return std::string("${cooling}");
+        case 5: return std::string("${freeze_stat}");
+        case 6: return std::string("${legionella}");
         default: return std::to_string(value);
       }
       return x;
@@ -947,12 +949,12 @@ select:
     name: ${ac_mode_zone_1}
     address: 28
     optionsmap:
-      "heating_room": 0
-      "heating_flow": 1
-      "heating_curve": 2
-      "cooling_room": 3
-      "cooling_flow": 4
-      "floor_dryup": 5
+      ${heating_room}: 0
+      ${heating_flow}: 1
+      ${heating_curve}: 2
+      ${cooling_room}: 3
+      ${cooling_flow}: 4
+      ${floor_dryup}: 5
     entity_category: config
 
 
@@ -963,6 +965,6 @@ select:
     name: ${hc_control_type}
     address: 58
     optionsmap:
-      "heating": 0
-      "cooling": 1
+      ${heating}: 0
+      ${cooling}: 1
     entity_category: config
