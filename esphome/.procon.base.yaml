@@ -910,17 +910,6 @@ number:
 
 
 switch:
-## Option for Relay
-## Comment with # if not used.
-  ## Relay
-  - platform: gpio
-    pin:
-      number: 5
-      inverted: false
-    name: ${relay}
-    id: relay
-    icon: mdi:alarm-bell
-
     ## Operating Mode (DHW) (FC6: 27, MA: 40028)
   - platform: modbus_controller
     modbus_controller_id: ${name}
