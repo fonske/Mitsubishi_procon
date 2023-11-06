@@ -13,18 +13,23 @@ packages:
     url: https://github.com/fonske/Mitsubishi_procon
     ref: main
     files: 
+      # Language Packs:
       - esphome/labels/.procon-labels-en.yaml
       #- esphome/labels/.procon-labels-nl.yaml
+      # Base:
       - esphome/.procon.base.yaml
+      # Boards:
       - esphome/boards/board-esp32.yaml
       #- esphome/boards/board-esp32S3.yaml
+      #- esphome/boards/board-m5stack-atom.yaml
 
 ## for developing/testing, uncomment local includes and comment out remote_package part.
 #packages:
 #  substitutions: !include labels/.procon-labels-nl.yaml
-#  device_base1: !include .procon.base.yaml
-#  device_base2: !include boards/board-esp32.yaml
-#  device_base2: !include boards/board-esp32S3.yaml
+#  device_base1:  !include .procon.base.yaml
+#  device_base2:  !include boards/board-esp32.yaml
+#  device_base2:  !include boards/board-esp32S3.yaml
+#  device_base2:  !include boards/board-m5stack-atom.yaml
 
 wifi:
   ssid: !secret wifi_ssid
