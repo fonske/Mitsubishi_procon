@@ -1,5 +1,5 @@
 substitutions:
-  procon_version: MelcoBEMS MINI firmware version
+  procon_version: MelcoBEMS MINI fw version
   heat_pump_frequency_master: Heat pump frequency – Master  
   temperature_setpoint_zone_1: Temperature setpoint
   temperature_setpoint_zone_2: Temperature setpoint Z2
