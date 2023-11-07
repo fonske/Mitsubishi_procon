@@ -10,7 +10,7 @@ api:
   reboot_timeout: 0s
 
 ota:
-#  password: !secret ota_password
+  password: !secret ota_password
 
 ### modbus ###
 modbus:
