@@ -42,7 +42,7 @@ wifi:
   # Enable static IP:
   #use_adress: # Example: 192.168.1.1
   
-  # uncomment when it needs to run on a .local domain
+  # uncomment and change when it needs to run on a non .local domain
   #  domain: .local
 
 # Put your API key here if you have one
