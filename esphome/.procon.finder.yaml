@@ -1,4 +1,4 @@
-#### Finder 1phase kWh Meter 7E 64 8 230 0210 ####
+#### 2x Finder 1phase kWh Meter 7E 64 8 230 0210 ####
 
 modbus_controller:
   - id: Finder1
