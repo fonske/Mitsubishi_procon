@@ -11,25 +11,24 @@ packages:
   remote_package:
     url: https://github.com/fonske/Mitsubishi_procon
     ref: main
-      # Language Packs:
-      - esphome/labels/.procon-labels-en.yaml
-      #- esphome/labels/.procon-labels-nl.yaml
-      # Base:
-      - esphome/.procon.base.yaml
-      # Boards:
-      - esphome/boards/board-esp32.yaml
-      #- esphome/boards/board-esp32S3.yaml
-      #- esphome/boards/board-m5stack-atom.yaml
+    refresh: 0s
+    files: [ esphome/labels/.procon-labels-en.yaml, esphome/.procon.base.yaml, esphome/boards/board-esp32S3.yaml, esphome/.procon.sdm.yaml ]
+      ## Language Packs:
+      # esphome/labels/.procon-labels-en.yaml
+      # esphome/labels/.procon-labels-nl.yaml
+      ## Base:
+      # esphome/.procon.base.yaml
+      ## Boards:
+      # esphome/boards/board-esp32.yaml
+      # esphome/boards/board-esp32S3.yaml
+      # esphome/boards/board-m5stack-atom.yaml
       ###
       ## Zone 2, If you have 2 zones on the heatpump enable this:
-      #- esphome/.procon.zone2.yaml
-
-## for developing/testing, uncomment local includes and comment out remote_package part.
-#packages:
-#  substitutions: !include labels/.procon-labels-nl.yaml
-#  device_base1: !include .procon.base.yaml
-#  device_base2: !include boards/board-esp32.yaml
-#  device_base2: !include boards/board-esp32S3.yaml
+      # esphome/.procon.zone2.yaml
+      ###
+      ## EASTRON 3ph SDM, If you have a 3phase Eastron kWh meter on the heatpump enable this:
+      # esphome/.procon.sdm.yaml
+      ## set parity to none on the kWh meter[
 ```
 
 # Translations
