@@ -28,7 +28,7 @@ packages:
       ###
       ## EASTRON 3ph SDM, If you have a 3phase Eastron kWh meter on the heatpump enable this:
       # esphome/.procon.sdm.yaml
-      ## set parity to none on the kWh meter[
+      ## set parity to none on the kWh meter
 ```
 
 # Translations
