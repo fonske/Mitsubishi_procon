@@ -23,7 +23,7 @@ sensor:
     name: Finder1 Power
     register_type: read
     address: 4134
-    value_type: U_WORD
+    value_type: FP32
     unit_of_measurement: W
     state_class: "measurement"
     device_class: "power"
@@ -35,7 +35,7 @@ sensor:
     name: Finder1 Total Energy
     register_type: read
     address: 4358
-    value_type: U_WORD
+    value_type: FP32
     unit_of_measurement: kWh
     state_class: "total_increasing"
     device_class: "energy"
@@ -47,7 +47,7 @@ sensor:
     name: Finder2 Power
     register_type: read
     address: 4134
-    value_type: U_WORD
+    value_type: FP32
     unit_of_measurement: W
     state_class: "measurement"
     device_class: "power"
@@ -59,7 +59,7 @@ sensor:
     name: Finder2 Total Energy
     register_type: read
     address: 4358
-    value_type: U_WORD
+    value_type: FP32
     unit_of_measurement: kWh
     state_class: "total_increasing"
     device_class: "energy"
