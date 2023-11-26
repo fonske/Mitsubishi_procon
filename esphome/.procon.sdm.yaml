@@ -7,7 +7,7 @@ modbus_controller:
     modbus_id: modbus1
     setup_priority: -10
     update_interval: 10s
-    parity: none  ## change frome even to none on the SDM meter
+    ## change parity frome even to none on the SDM meter
 
 sensor:
     ## Power
