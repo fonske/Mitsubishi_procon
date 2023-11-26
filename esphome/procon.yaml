@@ -26,10 +26,14 @@ packages:
       ###
       ## Zone 2, If you have 2 zones on the heatpump enable this:
       # esphome/.procon.zone2.yaml
-      ###
+      ##
       ## EASTRON 3ph SDM, If you have a 3phase Eastron kWh meter on the heatpump enable this:
       # esphome/.procon.sdm.yaml
       ## set parity to none on the kWh meter
+      ## 2xFinder 1ph 7E 64 8 230 0210. If you have these kWh meters on the heatpump enable this:
+      # esphome/.procon.finder.yaml
+      ## set parity to none on the kWh meter
+      ###
 
 ## for developing/testing, uncomment local includes and comment out remote_package part.
 #packages:
