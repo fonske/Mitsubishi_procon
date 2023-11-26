@@ -17,7 +17,7 @@ modbus_controller:
     ## change parity frome even to none on the Finder meter. Baudrate to 9600
 
 sensor:
-    ## Power
+    ## Power1
   - platform: modbus_controller
     modbus_controller_id: Finder1
     name: Finder1 Power
@@ -27,9 +27,11 @@ sensor:
     unit_of_measurement: W
     state_class: "measurement"
     device_class: "power"
-    accuracy_decimals: 3
+    accuracy_decimals: 0
+    filters:
+      - multiply: 1
 
-    ## Energy
+    ## Energy1
   - platform: modbus_controller
     modbus_controller_id: Finder1
     name: Finder1 Total Energy
@@ -40,8 +42,10 @@ sensor:
     state_class: "total_increasing"
     device_class: "energy"
     accuracy_decimals: 3
+    filters:
+      - multiply: 0.001
 
-    ## Power
+    ## Power2
   - platform: modbus_controller
     modbus_controller_id: Finder2
     name: Finder2 Power
@@ -51,11 +55,13 @@ sensor:
     unit_of_measurement: W
     state_class: "measurement"
     device_class: "power"
-    accuracy_decimals: 3
+    accuracy_decimals: 0
+    filters:
+      - multiply: 1
 
-    ## Energy
+    ## Energy2
   - platform: modbus_controller
-    modbus_controller_id: Finder1
+    modbus_controller_id: Finder2
     name: Finder2 Total Energy
     register_type: read
     address: 4358
@@ -64,4 +70,6 @@ sensor:
     state_class: "total_increasing"
     device_class: "energy"
     accuracy_decimals: 3
+    filters:
+      - multiply: 0.001
     
