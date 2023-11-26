@@ -55,7 +55,7 @@ sensor:
     unit_of_measurement: A
     state_class: measurement
     device_class: current
-    accuracy_decimals: 0
+    accuracy_decimals: 2
     filters:
       - multiply: 1
 
@@ -111,7 +111,7 @@ sensor:
     unit_of_measurement: A
     state_class: measurement
     device_class: current
-    accuracy_decimals: 0
+    accuracy_decimals: 2
     filters:
       - multiply: 1
 
