@@ -1,68 +1,67 @@
-#### Eastron SDM 3phase kWh Meter ####
-## to add a SDM Modbus kWh meter reading, see https://gathering.tweakers.net/forum/list_message/77182598#77182598
+#### Finder 1phase kWh Meter 7E 64 8 230 0210 ####
+
 modbus_controller:
-  - id: SDM
-    ## SDM meter slaveadress 5
-    address: 5
+  - id: Finder1
+    ## Finder1 meter slaveadress 2
+    address: 2
     modbus_id: modbus1
     setup_priority: -10
     update_interval: 10s
-    ## change parity frome even to none on the SDM meter
+    ## change parity frome even to none on the Finder meter. Baudrate to 9600
+  - id: Finder2
+    ## Finder2 meter slaveadress 3
+    address: 3
+    modbus_id: modbus1
+    setup_priority: -10
+    update_interval: 10s
+    ## change parity frome even to none on the Finder meter. Baudrate to 9600
 
 sensor:
     ## Power
   - platform: modbus_controller
-    modbus_controller_id: SDM
-    name: SDM Total System Power
+    modbus_controller_id: Finder1
+    name: Finder1 Power
     register_type: read
-    address: 0x0034
+    address: 4134
     value_type: FP32
     unit_of_measurement: W
     state_class: "measurement"
     device_class: "power"
     accuracy_decimals: 3
-    
+
+    ## Energy
   - platform: modbus_controller
-    modbus_controller_id: SDM
-    name: SDM Import Active Energy
+    modbus_controller_id: Finder1
+    name: Finder1 Total Energy
     register_type: read
-    address: 0x0048
+    address: 4358
+    value_type: FP32
+    unit_of_measurement: kWh
+    state_class: "total_increasing"
+    device_class: "energy"
+    accuracy_decimals: 3
+
+    ## Power
+  - platform: modbus_controller
+    modbus_controller_id: Finder2
+    name: Finder2 Power
+    register_type: read
+    address: 4134
+    value_type: FP32
+    unit_of_measurement: W
+    state_class: "measurement"
+    device_class: "power"
+    accuracy_decimals: 3
+
+    ## Energy
+  - platform: modbus_controller
+    modbus_controller_id: Finder1
+    name: Finder2 Total Energy
+    register_type: read
+    address: 4358
     value_type: FP32
     unit_of_measurement: kWh
     state_class: "total_increasing"
     device_class: "energy"
     accuracy_decimals: 3
     
-   # Current
-  - platform: modbus_controller
-    modbus_controller_id: SDM
-    name: SDM Phase 1 Current
-    register_type: read
-    address: 0x0006
-    value_type: FP32
-    device_class: "current"
-    state_class: "measurement"
-    unit_of_measurement: A
-    accuracy_decimals: 3
-
-  - platform: modbus_controller
-    modbus_controller_id: SDM
-    name: SDM Phase 2 Current
-    register_type: read
-    address: 0x0008
-    value_type: FP32
-    device_class: "current"
-    state_class: "measurement"
-    unit_of_measurement: A
-    accuracy_decimals: 3
-    
-  - platform: modbus_controller
-    modbus_controller_id: SDM
-    name: SDM Phase 3 Current
-    register_type: read
-    address: 0x000A
-    value_type: FP32
-    device_class: "current"
-    state_class: "measurement"
-    unit_of_measurement: A
-    accuracy_decimals: 3
