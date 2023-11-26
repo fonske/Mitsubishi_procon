@@ -67,8 +67,8 @@ sensor:
     address: 4358
     value_type: FP32
     unit_of_measurement: kWh
-    state_class: "total_increasing"
-    device_class: "energy"
+    state_class: total_increasing
+    device_class: energy
     accuracy_decimals: 3
     filters:
       - multiply: 0.001
@@ -81,8 +81,8 @@ sensor:
     address: 4134
     value_type: FP32
     unit_of_measurement: W
-    state_class: "measurement"
-    device_class: "power"
+    state_class: measurement
+    device_class: power
     accuracy_decimals: 0
     filters:
       - multiply: 1
@@ -123,8 +123,8 @@ sensor:
     address: 4358
     value_type: FP32
     unit_of_measurement: kWh
-    state_class: "total_increasing"
-    device_class: "energy"
+    state_class: total_increasing
+    device_class: energy
     accuracy_decimals: 3
     filters:
       - multiply: 0.001
