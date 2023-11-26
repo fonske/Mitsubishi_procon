@@ -25,8 +25,36 @@ sensor:
     address: 4134
     value_type: FP32
     unit_of_measurement: W
-    state_class: "measurement"
-    device_class: "power"
+    state_class: measurement
+    device_class: power
+    accuracy_decimals: 0
+    filters:
+      - multiply: 1
+
+    ## Voltage1
+  - platform: modbus_controller
+    modbus_controller_id: Finder1
+    name: Finder1 Voltage
+    register_type: read
+    address: 4108
+    value_type: FP32
+    unit_of_measurement: V
+    state_class: measurement
+    device_class: voltage
+    accuracy_decimals: 0
+    filters:
+      - multiply: 1
+
+    ## Current1
+  - platform: modbus_controller
+    modbus_controller_id: Finder1
+    name: Finder1 Current
+    register_type: read
+    address: 4118
+    value_type: FP32
+    unit_of_measurement: A
+    state_class: measurement
+    device_class: current
     accuracy_decimals: 0
     filters:
       - multiply: 1
@@ -55,6 +83,34 @@ sensor:
     unit_of_measurement: W
     state_class: "measurement"
     device_class: "power"
+    accuracy_decimals: 0
+    filters:
+      - multiply: 1
+
+    ## Voltage2
+  - platform: modbus_controller
+    modbus_controller_id: Finder2
+    name: Finder2 Voltage
+    register_type: read
+    address: 4108
+    value_type: FP32
+    unit_of_measurement: V
+    state_class: measurement
+    device_class: voltage
+    accuracy_decimals: 0
+    filters:
+      - multiply: 1
+
+    ## Current2
+  - platform: modbus_controller
+    modbus_controller_id: Finder2
+    name: Finder2 Current
+    register_type: read
+    address: 4118
+    value_type: FP32
+    unit_of_measurement: A
+    state_class: measurement
+    device_class: current
     accuracy_decimals: 0
     filters:
       - multiply: 1
