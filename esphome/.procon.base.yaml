@@ -512,6 +512,7 @@ sensor:
     id: cop_heating
     name: "${name} ${cop_heating}"
     icon: mdi:slash-forward-box
+    unit_of_measurement: " "
     accuracy_decimals: 2
     lambda: |-
       return (id(produced_heating_kwh).state + (id(produced_heating_wh).state/100)) / (id(heating_kwh).state + (id(heating_wh).state/100));
@@ -522,6 +523,7 @@ sensor:
     id: cop_cooling
     name: "${name} ${cop_cooling}"
     icon: mdi:slash-forward-box
+    unit_of_measurement: " "
     accuracy_decimals: 2
     lambda: |-
       return (id(produced_cooling_kwh).state + (id(produced_cooling_wh).state/100)) / (id(cooling_kwh).state + (id(cooling_wh).state/100));
@@ -532,6 +534,7 @@ sensor:
     id: cop_dhw
     name: "${name} ${cop_dhw}"
     icon: mdi:slash-forward-box
+    unit_of_measurement: " "
     accuracy_decimals: 2
     lambda: |-
       return (id(produced_dhw_kwh).state + (id(produced_dhw_wh).state/100)) / (id(dhw_kwh).state + (id(dhw_wh).state/100));
