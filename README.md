@@ -11,7 +11,10 @@ packages:
     url: https://github.com/fonske/Mitsubishi_procon
     ref: main
     refresh: 0s
-    files: [ esphome/labels/.procon-labels-en.yaml, esphome/.procon.base.yaml, esphome/boards/board-esp32S3.yaml, esphome/.procon.finder.yaml ]
+    files: [ esphome/labels/.procon-labels-en.yaml, 
+             esphome/.procon.base.yaml, 
+             esphome/boards/board-esp32.yaml 
+           ]
       ## Language Packs:
       # esphome/labels/.procon-labels-en.yaml
       # esphome/labels/.procon-labels-nl.yaml
