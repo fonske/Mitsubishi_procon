@@ -892,10 +892,10 @@ number:
     max_value: 36
     step: 0.5
     multiply: 100
-    on_value:
-      - climate.control:
-          id: ${name}_climate
-          target_temperature: !lambda "return x;"
+    #on_value:
+    #  - climate.control:
+    #      id: ${name}_climate
+    #      target_temperature: !lambda "return x;"
 
 
     ## Thermostat Target Temperature – Zone 1 (signed) (FC6: 54, MA: 40055)
