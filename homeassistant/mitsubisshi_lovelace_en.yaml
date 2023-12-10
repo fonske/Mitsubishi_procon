@@ -1,0 +1,310 @@
+  - theme: Backend-selected
+    title: Mitsubishi
+    path: mitsubishi
+    badges: []
+    cards:
+      - type: picture-elements
+        image: local/images/ecodan/ecodan-basis.png?v=1
+        elements:
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_operating_mode
+                state: Stop
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-off.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_operating_mode
+                state: Heating
+              - entity: sensor.mitsubishi_defrost
+                state: 'Off'
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-heating.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+              - type: state-label
+                entity: sensor.kamstrup_power_produced
+                style:
+                  top: 51%
+                  left: 10%
+                  color: black
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_operating_mode
+                state: Hot Water
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-hot-water.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_defrost
+                state: Defrost
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-defrost.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_operating_mode
+                state: Cooling
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-cooling.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+              - type: state-label
+                entity: sensor.kamstrup_power_produced
+                style:
+                  top: 51%
+                  left: 10%
+                  color: black
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_operating_mode
+                state: Hot Water
+              - entity: sensor.mitsubishi_heat_source_status
+                state: Electric heater
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-element.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: input_boolean.wtw_naloop_aan
+                state: 'on'
+              - entity: sensor.comfoairq_percentage
+                state: '100'
+            elements:
+              - type: state-label
+                entity: sensor.shelly_hw_temperature
+                style:
+                  top: 30%
+                  left: 64%
+                  color: white
+              - type: icon
+                icon: mdi:faucet
+                style:
+                  top: 29%
+                  left: 55%
+                  color: red
+          - type: state-label
+            entity: sensor.mitsubishi_room_temperature
+            style:
+              top: 86.5%
+              left: 21%
+              color: black
+          - type: state-label
+            entity: number.mitsubishi_h_c_thermostat_target_temperature
+            style:
+              top: 80%
+              left: 21%
+              color: black
+          - type: state-label
+            entity: sensor.mitsubishi_flow_temperature
+            style:
+              top: 13%
+              left: 74%
+              color: black
+              align: right
+          - type: state-label
+            entity: sensor.kamstrup_differential_temperature
+            prefix: 'Δt: '
+            style:
+              top: 35%
+              left: 10%
+              color: black
+          - type: state-label
+            entity: sensor.mitsubishi_return_temperature
+            style:
+              top: 38%
+              left: 74%
+              color: black
+              align: right
+          - type: state-label
+            entity: sensor.mitsubishi_tank_water_temperature
+            style:
+              top: 31%
+              left: 42%
+              color: white
+          - type: state-label
+            entity: sensor.shelly_lower_tank_temperature
+            style:
+              top: 51%
+              left: 42%
+              color: white
+          - type: state-label
+            entity: sensor.mitsubishi_refrigerant_liquid_temperature
+            style:
+              top: 54%
+              left: 85%
+              color: white
+          - type: state-label
+            entity: sensor.mitsubishi_outdoor_ambient_temperature
+            style:
+              top: 92%
+              left: 82%
+              color: white
+          - type: state-label
+            entity: sensor.mitsubishi_heat_pump_frequency_master
+            style:
+              top: 68%
+              left: 83%
+              color: white
+          - type: state-label
+            entity: sensor.mitsubishi_flow_rate
+            style:
+              top: 13%
+              left: 72%
+              color: white
+          - type: service-button
+            title: ':'
+            style:
+              top: 79%
+              left: 33%
+              color: black
+            service: homeassistant.turn_on
+            service_data:
+              entity_id: script.temperature_up
+          - type: service-button
+            title: .
+            style:
+              top: 87%
+              left: 33%
+              color: black
+            service: homeassistant.turn_on
+            service_data:
+              entity_id: script.temperature_down
+      - type: entities
+        entities:
+          - entity: switch.mitsubishi_system_on_off
+            name: System on/off
+          - entity: switch.mitsubishi_set_holiday_mode
+            name: Set holiday mode
+          - entity: switch.mitsubishi_set_force_dhw
+            name: Set force DHW
+          - entity: number.mitsubishi_h_c_thermostat_target_temperature
+            name: H/C thermostat target temperature
+          - entity: number.mitsubishi_thermostat_target_temperature
+            name: Thermostat target temperature
+        title: mitsubishi
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: sensor.mitsubishi_boiler_flow_temperature
+            name: Boiler flow temperature
+          - entity: sensor.mitsubishi_boiler_return_temperature
+            name: Boiler return temperature
+          - entity: sensor.mitsubishi_consumed_electric_power
+            name: Consumed electric power
+          - entity: sensor.mitsubishi_cop_cooling
+            name: COP cooling
+          - entity: sensor.mitsubishi_cop_dhw
+            name: COP DHW
+          - entity: sensor.mitsubishi_cop_heating
+            name: COP heating
+          - entity: sensor.mitsubishi_defrost
+            name: Defrost
+          - entity: sensor.mitsubishi_dhw_temperature_drop
+            name: DHW temperature drop
+          - entity: sensor.mitsubishi_energy_produced_cooling
+            name: Energy produced cooling
+          - entity: sensor.mitsubishi_energy_produced_dhw
+            name: Energy produced DHW
+          - entity: sensor.mitsubishi_energy_produced_heating
+            name: Energy produced heating
+          - entity: sensor.mitsubishi_energy_used_cooling
+            name: Energy used cooling
+          - entity: sensor.mitsubishi_energy_used_dhw
+            name: Energy used DHW
+          - entity: sensor.mitsubishi_energy_used_heating
+            name: Energy used heating
+          - entity: sensor.mitsubishi_flow_rate
+            name: Flow rate
+          - entity: sensor.mitsubishi_flow_temperature
+            name: Flow temperature
+          - entity: sensor.mitsubishi_flow_temperature_setpoint
+            name: Flow temperature setpoint
+          - entity: sensor.mitsubishi_heat_pump_frequency_master
+            name: Heat pump frequency – Master
+          - entity: sensor.mitsubishi_heat_pump_run_time
+            name: Heat pump run time
+          - entity: sensor.mitsubishi_heat_source_status
+            name: Heat source status
+          - entity: sensor.mitsubishi_last_measured_total_energy_consumption
+            name: Last measured total energy consumption
+          - entity: sensor.mitsubishi_last_measured_total_energy_produced
+            name: Last measured total energy produced
+          - entity: sensor.mitsubishi_legionella_temperature_setpoint
+            name: Legionella temperature setpoint
+          - entity: sensor.mitsubishi_operating_mode
+            name: Operating mode
+          - entity: sensor.mitsubishi_outdoor_ambient_temperature
+            name: Outdoor ambient temperature
+          - entity: sensor.mitsubishi_produced_power
+            name: Produced power
+          - entity: sensor.mitsubishi_refrigerant_liquid_temperature
+            name: Refrigerant liquid temperature
+          - entity: sensor.mitsubishi_residual_heat_removal
+            name: Residual heat removal
+          - entity: sensor.mitsubishi_return_temperature
+            name: Return temperature
+          - entity: sensor.mitsubishi_return_temperature_setpoint
+            name: Return temperature setpoint
+          - entity: sensor.mitsubishi_room_temperature
+            name: Room temperature
+          - entity: sensor.mitsubishi_tank_water_temperature
+            name: Tank water temperature
+          - entity: sensor.mitsubishi_temperature_setpoint
+            name: Temperature setpoint
+        title: mitsubishi
+      - type: entities
+        entities:
+          - entity: select.mitsubishi_a_c_mode
+            name: A/C mode
+          - entity: switch.mitsubishi_cooling_on_prohibit
+            name: Cooling on prohibit
+          - entity: switch.mitsubishi_dhw_eco_mode
+            name: DHW eco mode
+          - entity: select.mitsubishi_hc_control_type
+            name: HC control type
+          - entity: number.mitsubishi_set_tank_water_temperature
+            name: Set tank water temperature
+        title: mitsubishi
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: sensor.mitsubishi_7_segment_display_error_code_digit_1
+            name: 7-Segment display error code digit 1
+          - entity: sensor.mitsubishi_7_segment_display_error_code_digit_2
+            name: 7-Segment display error code digit 2
+          - entity: sensor.mitsubishi_fault_code
+            name: Fault code
+          - entity: sensor.mitsubishi_melcobems_mini_fw_version
+            name: MelcoBEMS MINI firmware version
+          - entity: sensor.mitsubishi_model_profile_1
+            name: Model Profile 1
+          - entity: sensor.mitsubishi_refrigerant_error_info
+            name: Refrigerant error info
+          - entity: sensor.mitsubishi_system_type_detected
+            name: System type detected
+        title: mitsubishi
