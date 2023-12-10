@@ -38,5 +38,3 @@ packages:
 Currently supported languages are en, nl.
 In order to change language, edit the line files: `esphome/procon.yaml`
 
-## Contact
-Contact me: alphonsuijtdehaag at gmail dot com, if you are interested in a PCB with an ESP32 (mh-et-live or lilygo esp32s3-T7) and XY-017 ttl to rs485 mounted on with 3d printed housing.
