@@ -88,25 +88,6 @@
                   top: 50%
                   left: 50%
                   width: 100%
-          - type: conditional
-            conditions:
-              - entity: input_boolean.wtw_naloop_aan
-                state: 'on'
-              - entity: sensor.comfoairq_percentage
-                state: '100'
-            elements:
-              - type: state-label
-                entity: sensor.shelly_hw_temperature
-                style:
-                  top: 30%
-                  left: 64%
-                  color: white
-              - type: icon
-                icon: mdi:faucet
-                style:
-                  top: 29%
-                  left: 55%
-                  color: red
           - type: state-label
             entity: sensor.mitsubishi_room_temperature
             style:
