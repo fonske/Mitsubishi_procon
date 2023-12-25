@@ -116,12 +116,6 @@
               left: 42%
               color: white
           - type: state-label
-            entity: sensor.shelly_lower_tank_temperature
-            style:
-              top: 51%
-              left: 42%
-              color: white
-          - type: state-label
             entity: sensor.mitsubishi_koelmiddelvloeistof_temperatuur
             style:
               top: 54%
