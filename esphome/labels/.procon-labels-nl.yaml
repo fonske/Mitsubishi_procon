@@ -1,5 +1,5 @@
 substitutions:
-  procon_version: MelcoBEMS MINI fW versie
+  procon_version: Melcobems mini fw versie
   heat_pump_frequency_master: Warmtepomp frequentie – Master  
   temperature_setpoint_zone_1: Ingestelde temperatuur
   temperature_setpoint_zone_2: Ingestelde temperatuur Z2
