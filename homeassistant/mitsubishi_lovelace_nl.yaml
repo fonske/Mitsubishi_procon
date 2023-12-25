@@ -296,6 +296,8 @@
             name: 7-Segment display error code digit 2
           - entity: sensor.mitsubishi_fout_code
             name: Fault code
+          - entity: sensor.mitsubishi_melcobems_mini_fw_versie
+            name: Melcobems mini fw versie
           - entity: sensor.mitsubishi_model_profiel_1
             name: Model Profile 1
           - entity: sensor.mitsubishi_koelmiddel_fout_info
