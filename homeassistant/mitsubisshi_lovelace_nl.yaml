@@ -1,0 +1,311 @@
+  - theme: Backend-selected
+    path: mitsubishi
+    icon: mdi:heat-pump-outline
+    badges: []
+    cards:
+      - type: picture-elements
+        image: local/images/ecodan/ecodan-basis.png?v=1
+        elements:
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_werkings_mode
+                state: Stop
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-off.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_werkings_mode
+                state: Verwarmen
+              - entity: sensor.mitsubishi_ontdooien
+                state: Uit
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-heating.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_werkings_mode
+                state: Warm Water
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-hot-water.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_ontdooien
+                state: Ontdooien
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-defrost.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_werkings_mode
+                state: Koelen
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-cooling.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: conditional
+            conditions:
+              - entity: sensor.mitsubishi_werkings_mode
+                state: Warm Water
+              - entity: sensor.mitsubishi_status_verwarmingsbron
+                state: c
+            elements:
+              - type: image
+                image: local/images/ecodan/ecodan-element.png?v=2
+                style:
+                  top: 50%
+                  left: 50%
+                  width: 100%
+          - type: state-label
+            entity: sensor.mitsubishi_kamer_temperatuur
+            style:
+              top: 86.5%
+              left: 21%
+              color: black
+          - type: state-label
+            entity: number.mitsubishi_thermostaat_doel_temperatuur
+            style:
+              top: 80%
+              left: 21%
+              color: black
+          - type: state-label
+            entity: sensor.mitsubishi_aanvoer_temperatuur
+            style:
+              top: 13%
+              left: 74%
+              color: black
+              align: right
+          - type: state-label
+            entity: sensor.temp_verschil_wp_aanvoer_en_retour_sww
+            prefix: 'Δt: '
+            style:
+              top: 35%
+              left: 10%
+              color: black
+          - type: state-label
+            entity: sensor.mitsubishi_retour_temperatuur
+            style:
+              top: 38%
+              left: 74%
+              color: black
+              align: right
+          - type: state-label
+            entity: sensor.mitsubishi_sww_boiler_temperatuur
+            style:
+              top: 31%
+              left: 42%
+              color: white
+          - type: state-label
+            entity: sensor.shelly_lower_tank_temperature
+            style:
+              top: 51%
+              left: 42%
+              color: white
+          - type: state-label
+            entity: sensor.mitsubishi_koelmiddelvloeistof_temperatuur
+            style:
+              top: 54%
+              left: 85%
+              color: white
+          - type: state-label
+            entity: sensor.mitsubishi_buiten_temperatuur
+            style:
+              top: 92%
+              left: 82%
+              color: white
+          - type: state-label
+            entity: sensor.mitsubishi_warmtepomp_frequentie_master
+            style:
+              top: 68%
+              left: 83%
+              color: white
+          - type: state-label
+            entity: sensor.mitsubishi_aanvoer_temperatuur
+            style:
+              top: 13%
+              left: 10%
+              color: white
+          - type: service-button
+            title: ':'
+            style:
+              top: 79%
+              left: 33%
+              color: black
+            service: homeassistant.turn_on
+            service_data:
+              entity_id: script.temperature_up
+          - type: service-button
+            title: .
+            style:
+              top: 87%
+              left: 33%
+              color: black
+            service: homeassistant.turn_on
+            service_data:
+              entity_id: script.temperature_down
+      - type: entities
+        entities:
+          - entity: switch.mitsubishi_systeem_aan_uit
+            name: Systeem aan/uit
+          - entity: switch.mitsubishi_vakantie_modus
+            name: Set vakantie modus
+          - entity: switch.mitsubishi_forceer_sww
+            name: Set forceer SWW
+          - entity: number.mitsubishi_thermostaat_doel_temperatuur
+            name: H/C Verw/Koelen doel temperatuur
+          - entity: number.mitsubishi_verw_koelen_doel_temperatuur
+            name: Verw/Koelen doel temperatuur
+        title: mitsubishi
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: sensor.mitsubishi_boiler_aanvoer_temperatuur
+            name: Boiler aanvoer temperatuur
+          - entity: sensor.mitsubishi_boiler_retour_temperatuur
+            name: Boiler retoer temperatuur
+          - entity: sensor.mitsubishi_verbruikt_elektrisch_vermogen
+            name: Verbruikt elektrisch vermogen
+          - entity: sensor.mitsubishi_cop_koelen
+            name: COP koelen
+          - entity: sensor.mitsubishi_cop_sww
+            name: COP SWW
+          - entity: sensor.mitsubishi_cop_verwarmen
+            name: COP verwarmen
+          - entity: sensor.mitsubishi_ontdooien
+            name: Ontdooien
+          - entity: sensor.mitsubishi_sww_temperatuur_hysterese
+            name: SWW temperatuur hysterese
+          - entity: sensor.mitsubishi_energy_geproduceerd_koelen
+            name: Energy geproduceerd koelen
+          - entity: sensor.mitsubishi_energy_geproduceerd_sww
+            name: Energy geproduceerd SWW
+          - entity: sensor.mitsubishi_energy_geproduceerd_verwarmen
+            name: Energy geproduceerd verwarmen
+          - entity: sensor.mitsubishi_energie_gebruikt_koelen
+            name: Energie gebruikt koelen
+          - entity: sensor.mitsubishi_energie_gebruikt_sww
+            name: Energie gebruikt SWW
+          - entity: sensor.mitsubishi_energie_gebruikt_verwarmen
+            name: Energie gebruikt verwarmen
+          - entity: sensor.mitsubishi_flow
+            name: Flow
+          - entity: sensor.mitsubishi_ingestelde_temperatuur
+            name: Flow temperature
+          - entity: sensor.mitsubishi_ingestelde_aanvoer_temperatuur
+            name: Ingestelde aanvoer temperatuur
+          - entity: sensor.mitsubishi_warmtepomp_frequentie_master
+            name: Heat pump frequency – Master
+          - entity: sensor.mitsubishi_warmtepomp_runtime
+            name: Warmtepomp runtime
+          - entity: sensor.mitsubishi_status_verwarmingsbron
+            name: Status verwarmingsbron
+          - entity: sensor.mitsubishi_laatst_gemeten_totale_energie_verbruikt
+            name: Laatst gemeten totale energie verbruikt
+          - entity: sensor.mitsubishi_laatst_gemeten_totale_energie_geproduceerd
+            name: Laatst gemeten totale energie geproduceerd
+          - entity: sensor.mitsubishi_ingestelde_legionella_temperatuur
+            name: Ingestelde legionella temperatuur
+          - entity: sensor.mitsubishi_werkings_mode
+            name: Werkings mode
+          - entity: sensor.mitsubishi_buiten_temperatuur
+            name: Buiten temperatuur
+          - entity: sensor.mitsubishi_geproduceerd_thermisch_vermogen
+            name: Geproduceerd thermisch vermogen
+          - entity: sensor.mitsubishi_koelmiddelvloeistof_temperatuur
+            name: Koelmiddelvloeistof temperatuur
+          - entity: sensor.mitsubishi_afvoer_van_restwarmte
+            name: Afvoer van restwarmte
+          - entity: sensor.mitsubishi_retour_temperatuur
+            name: Retour temperatuur
+          - entity: sensor.mitsubishi_ingestelde_retour_temperatuur
+            name: Ingestelde retour temperatuur
+          - entity: sensor.mitsubishi_kamer_temperatuur
+            name: Kamer temperatuur
+          - entity: sensor.mitsubishi_sww_boiler_temperatuur
+            name: SWW boiler temperatuur
+          - entity: sensor.mitsubishi_ingestelde_temperatuur
+            name: Ingestelde temperatuur
+        title: mitsubishi
+      - type: entities
+        entities:
+          - entity: select.mitsubishi_a_c_mode
+            name: A/C mode
+          - entity: switch.mitsubishi_koelen_verboden
+            name: Koelen verboden
+          - entity: switch.mitsubishi_sww_eco_modus
+            name: SWW eco modus
+          - entity: select.mitsubishi_hc_controle_type
+            name: HC controle type
+          - entity: number.mitsubishi_ingestelde_boiler_doel_temperatuur
+            name: Ingestelde boiler doel temperatuur
+        title: mitsubishi
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: sensor.mitsubishi_7_segment_display_fout_code_digit_1
+            name: 7-Segment display fout code digit 1
+          - entity: sensor.mitsubishi_7_segment_display_fout_code_digit_2
+            name: 7-Segment display fout code digit 2
+          - entity: sensor.mitsubishi_fout_code
+            name: Fout code
+          - entity: sensor.mitsubishi_melcobems_mini_fw_versie
+            name: MelcoBEMS MINI fW versie
+          - entity: sensor.mitsubishi_model_profiel_1
+            name: Model Profiel 1
+          - entity: sensor.mitsubishi_koelmiddel_fout_info
+            name: Koelmiddel fout info
+          - entity: sensor.mitsubishi_systeem_type_gedetecteerd
+            name: Systeem type gedetecteerd
+        title: mitsubishi
+      - type: history-graph
+        entities:
+          - sensor.mitsubishi_werkings_mode
+      - type: entities
+        entities:
+          - entity: select.mitsubishi_a_c_mode
+            name: A/C mode
+          - entity: switch.mitsubishi_koelen_verboden
+            name: Cooling on prohibit
+          - entity: switch.mitsubishi_sww_eco_modus
+            name: DHW eco mode
+          - entity: select.mitsubishi_hc_controle_type
+            name: HC control type
+          - entity: number.mitsubishi_ingestelde_boiler_doel_temperatuur
+            name: Set tank water temperature
+        title: mitsubishi
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: sensor.mitsubishi_7_segment_display_fout_code_digit_1
+            name: 7-Segment display error code digit 1
+          - entity: sensor.mitsubishi_7_segment_display_fout_code_digit_2
+            name: 7-Segment display error code digit 2
+          - entity: sensor.mitsubishi_fout_code
+            name: Fault code
+          - entity: sensor.mitsubishi_model_profiel_1
+            name: Model Profile 1
+          - entity: sensor.mitsubishi_koelmiddel_fout_info
+            name: Refrigerant error info
+          - entity: sensor.mitsubishi_systeem_type_gedetecteerd
+            name: System type detected
+        title: mitsubishi
