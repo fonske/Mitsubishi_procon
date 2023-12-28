@@ -46,3 +46,5 @@ captive_portal:
 # Enable Web server.
 web_server:
   port: 80
+
+ota:
