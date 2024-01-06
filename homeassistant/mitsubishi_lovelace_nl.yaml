@@ -176,7 +176,7 @@
           - entity: sensor.mitsubishi_boiler_aanvoer_temperatuur
             name: Boiler aanvoer temperatuur
           - entity: sensor.mitsubishi_boiler_retour_temperatuur
-            name: Boiler retoer temperatuur
+            name: Boiler retour temperatuur
           - entity: sensor.mitsubishi_verbruikt_elektrisch_vermogen
             name: Verbruikt elektrisch vermogen
           - entity: sensor.mitsubishi_cop_koelen
