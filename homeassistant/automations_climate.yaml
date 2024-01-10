@@ -1,0 +1,58 @@
+- id: '1663182606288'
+  alias: Mitsubishi climate
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - climate.mitsubishi_climate
+    attribute: temperature
+    id: setpoint
+  - platform: state
+    entity_id:
+    - climate.mitsubishi_climate
+    attribute: hvac_action
+    id: heating
+    to: heating
+  - platform: state
+    entity_id:
+    - climate.mitsubishi_climate
+    attribute: hvac_action
+    to: 'off'
+    id: 'off'
+  condition:
+  - condition: and
+    conditions:
+    - condition: template
+      value_template: '{% if trigger.to_state.context.user_id is not none %} true
+        {% endif %}'
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - setpoint
+      sequence:
+      - service: number.set_value
+        data:
+          value: '{{ trigger.to_state.attributes.temperature|float }}'
+        target:
+          entity_id: number.mitsubishi_verw_koelen_doel_temperatuur
+    - conditions:
+      - condition: trigger
+        id:
+        - heating
+      sequence:
+      - service: switch.turn_on
+        data: {}
+        target:
+          entity_id: switch.mitsubishi_systeem_aan_uit
+    - conditions:
+      - condition: trigger
+        id:
+        - 'off'
+      sequence:
+      - service: switch.turn_off
+        data: {}
+        target:
+          entity_id: switch.mitsubishi_systeem_aan_uit
+  mode: single
