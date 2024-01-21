@@ -26,8 +26,43 @@ modbus_controller:
     update_interval: 10s
 #    offline_skip_updates: 2
 
-sensor:
+binary_sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: in1_thermostat
+    name: ${name} ${in1_thermostat}
+    register_type: discrete_input
+    address: 0
 
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: booster_heater
+    name: ${name} ${booster_heater}
+    register_type: discrete_input
+    address: 17
+
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: immersion_heater
+    name: ${name} ${immersion_heater}
+    register_type: discrete_input
+    address: 20
+
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: water_pump
+    name: ${name} ${water_pump}
+    register_type: discrete_input
+    address: 21
+
+  - platform: modbus_controller
+    modbus_controller_id: ${name}
+    id: three_way_valve
+    name: ${name} ${three_way_valve}
+    register_type: discrete_input
+    address: 24
+
+sensor:
     ## MelcoBEMS MINI (A1M) Firmware Version (FC4: 3, MA: 30004)
   - platform: modbus_controller
     modbus_controller_id: ${name}
