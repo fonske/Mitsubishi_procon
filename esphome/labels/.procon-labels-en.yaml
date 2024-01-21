@@ -1,4 +1,9 @@
 substitutions:
+  in1_thermostat: IN1 Thermostat
+  booster_heater: Booster heater
+  immersion_heater: Immersion heater
+  water_pump: Water pump
+  three_way_valve: 3 way valve
   procon_version: MelcoBEMS MINI fw version
   heat_pump_frequency_master: Heat pump frequency – Master  
   temperature_setpoint_zone_1: Temperature setpoint

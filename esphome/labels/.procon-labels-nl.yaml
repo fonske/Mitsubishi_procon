@@ -1,4 +1,9 @@
 substitutions:
+  in1_thermostat: IN1 thermostaat
+  booster_heater: Booster element
+  immersion_heater: Extern element
+  water_pump: Water pomp
+  three_way_valve: 3 weg klep
   procon_version: Melcobems mini fw versie
   heat_pump_frequency_master: Warmtepomp frequentie – Master  
   temperature_setpoint_zone_1: Ingestelde temperatuur
