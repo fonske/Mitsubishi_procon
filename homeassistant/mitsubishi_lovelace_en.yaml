@@ -274,18 +274,14 @@
         show_header_toggle: false
       - type: entities
         entities:
-          - entity: sensor.mitsubishi_7_segment_display_error_code_digit_1
-            name: 7-Segment display error code digit 1
-          - entity: sensor.mitsubishi_7_segment_display_error_code_digit_2
-            name: 7-Segment display error code digit 2
-          - entity: sensor.mitsubishi_fault_code
-            name: Fault code
-          - entity: sensor.mitsubishi_melcobems_mini_fw_version
-            name: MelcoBEMS MINI firmware version
-          - entity: sensor.mitsubishi_model_profile_1
-            name: Model Profile 1
-          - entity: sensor.mitsubishi_refrigerant_error_info
-            name: Refrigerant error info
-          - entity: sensor.mitsubishi_system_type_detected
-            name: System type detected
+          - entity: binary_sensor.mitsubishi_in1_thermostat
+            name: IN1 thermostat
+          - entity: binary_sensor.mitsubishi_water_pump
+            name: Water pump
+          - entity: binary_sensor.mitsubishi_booster_heater
+            name: Booster heater
+          - entity: binary_sensor.mitsubishi_immersion_heater
+            name: Immersion heater
+          - entity: binary_sensor.mitsubishi_three_way_valve
+            name: 3 way valve
         title: mitsubishi
