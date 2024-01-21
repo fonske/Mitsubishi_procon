@@ -290,18 +290,14 @@
         show_header_toggle: false
       - type: entities
         entities:
-          - entity: sensor.mitsubishi_7_segment_display_fout_code_digit_1
-            name: 7-Segment display error code digit 1
-          - entity: sensor.mitsubishi_7_segment_display_fout_code_digit_2
-            name: 7-Segment display error code digit 2
-          - entity: sensor.mitsubishi_fout_code
-            name: Fault code
-          - entity: sensor.mitsubishi_melcobems_mini_fw_versie
-            name: Melcobems mini fw versie
-          - entity: sensor.mitsubishi_model_profiel_1
-            name: Model Profile 1
-          - entity: sensor.mitsubishi_koelmiddel_fout_info
-            name: Refrigerant error info
-          - entity: sensor.mitsubishi_systeem_type_gedetecteerd
-            name: System type detected
+          - entity: binary_sensor.mitsubishi_in1_thermostaat
+            name: IN1 thermostaat
+          - entity: binary_sensor.mitsubishi_water_pomp
+            name: Water pomp
+          - entity: binary_sensor.mitsubishi_booster_element
+            name: Booster element
+          - entity: binary_sensor.mitsubishi_extern_element
+            name: Extern element
+          - entity: binary_sensor.mitsubishi_3_weg_klep
+            name: 3-weg klep
         title: mitsubishi
