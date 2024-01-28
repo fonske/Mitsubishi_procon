@@ -62,3 +62,4 @@ In order to change language, edit the line files: `esphome/procon.yaml`
 ## Contact
 Contact me: alphonsuijtdehaag at gmail dot com, if you are interested in a PCB with a ESP32 (lilygo ESP32S3-T7) or M5stack RS485 with Atom s3 lite
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ebbenberg)
