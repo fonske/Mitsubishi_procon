@@ -1,22 +1,10 @@
 - id: '1663182606288'
-  alias: Mitsubishi climate
+  alias: Mitsubishi thermostat
   description: ''
   trigger:
   - platform: state
     entity_id:
-    - climate.mitsubishi_climate
-    attribute: temperature
-    id: setpoint
-  - platform: state
-    entity_id:
-    - climate.mitsubishi_climate
-    attribute: hvac_action
-    id: heating
-    to: heating
-  - platform: state
-    entity_id:
-    - climate.mitsubishi_climate
-    attribute: hvac_action
+    - binary_sensor.mitsubishi_in1_thermostat
     to: 'off'
     id: 'off'
   condition:
