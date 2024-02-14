@@ -50,10 +50,10 @@ substitutions:
   model_profile_1: Model Profiel 1
   operating_mode: Werkings mode
   set_tank_water_temperature: Ingestelde boiler doel temperatuur
-  hc_thermostat_target_temperature_zone_1: Verw/Koelen doel temperatuur
-  hc_thermostat_target_temperature_zone_2: Verw/Koelen doel temperatuur Z2
-  thermostat_target_temperature_zone_1: Thermostaat doel temperatuur
-  thermostat_target_temperature_zone_2: Thermostaat doel temperatuur Z2
+  hc_thermostat_target_temperature_zone_1: Flow temperatuur doel instelling
+  hc_thermostat_target_temperature_zone_2: Flow temperatuur doel instelling Z2
+  thermostat_target_temperature_zone_1: Ruimte thermostaat doel temperatuur
+  thermostat_target_temperature_zone_2: Ruimte thermostaat doel temperatuur Z2
   relay: Relais
   operating_mode_dhw: SWW eco modus
   force_dhw: Forceer SWW

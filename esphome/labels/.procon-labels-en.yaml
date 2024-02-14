@@ -50,10 +50,10 @@ substitutions:
   model_profile_1: Model Profile 1
   operating_mode: Operating mode
   set_tank_water_temperature: Set tank water temperature
-  hc_thermostat_target_temperature_zone_1: H/C thermostat target temperature
-  hc_thermostat_target_temperature_zone_2: H/C thermostat target temperature Z2
-  thermostat_target_temperature_zone_1: Thermostat target temperature
-  thermostat_target_temperature_zone_2: Thermostat target temperature Z2
+  hc_thermostat_target_temperature_zone_1: Flow temperature target setpoint
+  hc_thermostat_target_temperature_zone_2: Flow temperature target setpoint Z2
+  thermostat_target_temperature_zone_1: Room temperature setpoint
+  thermostat_target_temperature_zone_2: Room temperature setpoint Z2
   relay: Relay
   operating_mode_dhw: DHW eco mode
   force_dhw: Set force DHW
