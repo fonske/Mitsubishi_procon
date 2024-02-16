@@ -33,7 +33,7 @@
           - type: conditional
             conditions:
               - entity: sensor.mitsubishi_werkings_mode
-                state: Warm Water
+                state: Warm water
             elements:
               - type: image
                 image: local/images/ecodan/ecodan-hot-water.png?v=2
