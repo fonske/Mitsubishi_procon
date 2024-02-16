@@ -276,20 +276,6 @@
           - sensor.mitsubishi_werkings_mode
       - type: entities
         entities:
-          - entity: select.mitsubishi_a_c_mode
-            name: A/C mode
-          - entity: switch.mitsubishi_koelen_verboden
-            name: Cooling on prohibit
-          - entity: switch.mitsubishi_sww_eco_modus
-            name: DHW eco mode
-          - entity: select.mitsubishi_hc_controle_type
-            name: HC control type
-          - entity: number.mitsubishi_ingestelde_boiler_doel_temperatuur
-            name: Set tank water temperature
-        title: mitsubishi
-        show_header_toggle: false
-      - type: entities
-        entities:
           - entity: binary_sensor.mitsubishi_in1_thermostaat
             name: IN1 thermostaat
           - entity: binary_sensor.mitsubishi_water_pomp
@@ -300,4 +286,3 @@
             name: Extern element
           - entity: binary_sensor.mitsubishi_3_weg_klep
             name: 3-weg klep
-        title: mitsubishi
