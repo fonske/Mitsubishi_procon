@@ -29,6 +29,7 @@ packages:
       # esphome/boards/board-esp32.yaml
       # esphome/boards/board-esp32S3.yaml
       # esphome/boards/board-m5stack-atom.yaml
+      # esphome/boards/board-m5stack-atoms3-lite.yaml
       #
       ## Zone 2, If you have 2 zones on the heatpump enable this:
       # esphome/.procon.zone2.yaml
