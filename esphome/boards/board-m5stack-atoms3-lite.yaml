@@ -42,9 +42,6 @@ wifi:
     ssid: "${name}"
     password: "configesp"
 
-esp32_improv:
-  authorizer: None 
-      
 captive_portal:
 
 # Enable Web server.
