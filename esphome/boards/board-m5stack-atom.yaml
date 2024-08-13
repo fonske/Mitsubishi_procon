@@ -52,3 +52,4 @@ web_server:
   port: 80
 
 ota:
+  platform: esphome
