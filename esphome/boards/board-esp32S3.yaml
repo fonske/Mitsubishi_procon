@@ -93,6 +93,7 @@ web_server:
   port: 80
 
 ota:
+  platform: esphome
   
 # Enable Status LED.
 status_led:
