@@ -60,6 +60,9 @@ esp32_improv:
       
 captive_portal:
 
+ota:
+  platform: esphome
+  
 # Enable Web server.
 web_server:
   port: 80
