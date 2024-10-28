@@ -25,6 +25,7 @@ modbus_controller:
     ## Procon Modbus slaveaddress 1
     address: 1
     modbus_id: modbus1
+    command_throttle: 200ms
     setup_priority: -10
     update_interval: 10s
 #    offline_skip_updates: 2
